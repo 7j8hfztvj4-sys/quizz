@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Fun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="confetti"></canvas>
+
+    <div id="theme-selection" class="theme-selection">
+        <h1>Choisis un thème</h1>
+        <div id="themes"></div>
+    </div>
+
+    <div id="quiz-container" class="quiz-container" style="display:none;">
+        <div id="quiz-card" class="quiz-card">
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <p id="time">10</p>
+            <h2 id="question-text"></h2>
+            <div class="answers">
+                <button id="btn0" onclick="answer(0)"></button>
+                <button id="btn1" onclick="answer(1)"></button>
+                <button id="btn2" onclick="answer(2)"></button>
+                <button id="btn3" onclick="answer(3)"></button>
+            </div>
+            <p id="feedback"></p>
+            <button id="next-btn" onclick="nextQuestion()" style="display:none;">Suivant</button>
+        </div>
+    </div>
+
+    <!-- Sons -->
+    <audio id="correct-sound" src="correct.mp3"></audio>
+    <audio id="incorrect-sound" src="incorrect.mp3"></audio>
+    <audio id="timeout-sound" src="timeout.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
